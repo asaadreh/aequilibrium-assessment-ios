@@ -1,0 +1,6 @@
+framework module Pods_aequilibrium_assessment_ios {
+  umbrella header "Pods-aequilibrium-assessment-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

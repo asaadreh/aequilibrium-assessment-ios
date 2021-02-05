@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1933D4F7C19CFBD29E8EED4F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84915F451E6C40B72D37139F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework */; };
+		5CAE71E83A74B319C3188513 /* Pods_aequilibrium_assessment_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D441A081AEDC1FB4705456EE /* Pods_aequilibrium_assessment_iosTests.framework */; };
 		746C917525CD1F430071AD46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917425CD1F430071AD46 /* AppDelegate.swift */; };
 		746C917925CD1F430071AD46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917825CD1F430071AD46 /* ViewController.swift */; };
 		746C917C25CD1F430071AD46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C917A25CD1F430071AD46 /* Main.storyboard */; };
@@ -14,6 +16,21 @@
 		746C918125CD1F480071AD46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C917F25CD1F480071AD46 /* LaunchScreen.storyboard */; };
 		746C918C25CD1F480071AD46 /* aequilibrium_assessment_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C918B25CD1F480071AD46 /* aequilibrium_assessment_iosTests.swift */; };
 		746C919725CD1F480071AD46 /* aequilibrium_assessment_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C919625CD1F480071AD46 /* aequilibrium_assessment_iosUITests.swift */; };
+		746C91B325CD30BA0071AD46 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91B225CD30BA0071AD46 /* Transformer.swift */; };
+		746C91BB25CD351D0071AD46 /* TransformerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */; };
+		746C91C125CD38720071AD46 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91C025CD38720071AD46 /* Constants.swift */; };
+		746C91CA25CD39AE0071AD46 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91C925CD39AE0071AD46 /* NameTableViewCell.swift */; };
+		746C91D225CD39E90071AD46 /* AttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91D125CD39E90071AD46 /* AttributeTableViewCell.swift */; };
+		746C91D725CD3A100071AD46 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91D625CD3A100071AD46 /* TeamTableViewCell.swift */; };
+		746C91DF25CD5B910071AD46 /* BaseTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91DE25CD5B910071AD46 /* BaseTableViewCellViewModel.swift */; };
+		746C91E425CD5BDA0071AD46 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91E325CD5BDA0071AD46 /* HeaderTableViewCell.swift */; };
+		746C91F025CD5D870071AD46 /* NameTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91EF25CD5D870071AD46 /* NameTableViewCellViewModel.swift */; };
+		746C91F525CD5D930071AD46 /* AttributeTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91F425CD5D930071AD46 /* AttributeTableViewCellViewModel.swift */; };
+		746C91FA25CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91F925CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift */; };
+		746C91FF25CD99080071AD46 /* SubmitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */; };
+		746C920525CDAC800071AD46 /* API Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C920425CDAC800071AD46 /* API Manager.swift */; };
+		746C921825CDB31F0071AD46 /* Local Storage Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C921725CDB31F0071AD46 /* Local Storage Manager.swift */; };
+		F7395C712AF845C09777AAC7 /* Pods_aequilibrium_assessment_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F91C17A67829FF13A3A321 /* Pods_aequilibrium_assessment_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F91C17A67829FF13A3A321 /* Pods_aequilibrium_assessment_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aequilibrium_assessment_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9375BD54DE832534A5816D /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E75B0A87C7445F8FE129107 /* Pods-aequilibrium-assessment-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-iosTests/Pods-aequilibrium-assessment-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B1CA0054F56FB1B4974BB1F /* Pods-aequilibrium-assessment-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios.debug.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		4DD2DD7053F41F223CA1CBB8 /* Pods-aequilibrium-assessment-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-iosTests.release.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-iosTests/Pods-aequilibrium-assessment-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		7296A432AAE3E49E18CA2A96 /* Pods-aequilibrium-assessment-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios.release.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios.release.xcconfig"; sourceTree = "<group>"; };
 		746C917125CD1F430071AD46 /* aequilibrium-assessment-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aequilibrium-assessment-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746C917425CD1F430071AD46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		746C917825CD1F430071AD46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +70,23 @@
 		746C919225CD1F480071AD46 /* aequilibrium-assessment-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "aequilibrium-assessment-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746C919625CD1F480071AD46 /* aequilibrium_assessment_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aequilibrium_assessment_iosUITests.swift; sourceTree = "<group>"; };
 		746C919825CD1F480071AD46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		746C91B225CD30BA0071AD46 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
+		746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerDetailViewController.swift; sourceTree = "<group>"; };
+		746C91C025CD38720071AD46 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		746C91C925CD39AE0071AD46 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		746C91D125CD39E90071AD46 /* AttributeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeTableViewCell.swift; sourceTree = "<group>"; };
+		746C91D625CD3A100071AD46 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		746C91DE25CD5B910071AD46 /* BaseTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		746C91E325CD5BDA0071AD46 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		746C91EF25CD5D870071AD46 /* NameTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		746C91F425CD5D930071AD46 /* AttributeTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		746C91F925CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTableViewCell.swift; sourceTree = "<group>"; };
+		746C920425CDAC800071AD46 /* API Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Manager.swift"; sourceTree = "<group>"; };
+		746C921725CDB31F0071AD46 /* Local Storage Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Storage Manager.swift"; sourceTree = "<group>"; };
+		84915F451E6C40B72D37139F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A23F101C3BF744A4AEE46BF9 /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D441A081AEDC1FB4705456EE /* Pods_aequilibrium_assessment_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aequilibrium_assessment_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7395C712AF845C09777AAC7 /* Pods_aequilibrium_assessment_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAE71E83A74B319C3188513 /* Pods_aequilibrium_assessment_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1933D4F7C19CFBD29E8EED4F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA56E022DC1D5FAA98FA97D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08F91C17A67829FF13A3A321 /* Pods_aequilibrium_assessment_ios.framework */,
+				84915F451E6C40B72D37139F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework */,
+				D441A081AEDC1FB4705456EE /* Pods_aequilibrium_assessment_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		746C916825CD1F430071AD46 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +134,8 @@
 				746C918A25CD1F480071AD46 /* aequilibrium-assessment-iosTests */,
 				746C919525CD1F480071AD46 /* aequilibrium-assessment-iosUITests */,
 				746C917225CD1F430071AD46 /* Products */,
+				E484F17218C80DF975635362 /* Pods */,
+				2EA56E022DC1D5FAA98FA97D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +152,15 @@
 		746C917325CD1F430071AD46 /* aequilibrium-assessment-ios */ = {
 			isa = PBXGroup;
 			children = (
+				746C921625CDB3100071AD46 /* Storage */,
+				746C920325CDAC6E0071AD46 /* Network */,
+				746C91E825CD5D1E0071AD46 /* ViewModels */,
+				746C91C825CD39890071AD46 /* Views */,
+				746C91BF25CD38610071AD46 /* Resources */,
+				746C91B125CD30960071AD46 /* Models */,
 				746C917425CD1F430071AD46 /* AppDelegate.swift */,
 				746C917825CD1F430071AD46 /* ViewController.swift */,
+				746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */,
 				746C917A25CD1F430071AD46 /* Main.storyboard */,
 				746C917D25CD1F480071AD46 /* Assets.xcassets */,
 				746C917F25CD1F480071AD46 /* LaunchScreen.storyboard */,
@@ -125,6 +187,74 @@
 			path = "aequilibrium-assessment-iosUITests";
 			sourceTree = "<group>";
 		};
+		746C91B125CD30960071AD46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				746C91B225CD30BA0071AD46 /* Transformer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		746C91BF25CD38610071AD46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				746C91C025CD38720071AD46 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		746C91C825CD39890071AD46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				746C91C925CD39AE0071AD46 /* NameTableViewCell.swift */,
+				746C91D125CD39E90071AD46 /* AttributeTableViewCell.swift */,
+				746C91D625CD3A100071AD46 /* TeamTableViewCell.swift */,
+				746C91E325CD5BDA0071AD46 /* HeaderTableViewCell.swift */,
+				746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		746C91E825CD5D1E0071AD46 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				746C91DE25CD5B910071AD46 /* BaseTableViewCellViewModel.swift */,
+				746C91EF25CD5D870071AD46 /* NameTableViewCellViewModel.swift */,
+				746C91F425CD5D930071AD46 /* AttributeTableViewCellViewModel.swift */,
+				746C91F925CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		746C920325CDAC6E0071AD46 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				746C920425CDAC800071AD46 /* API Manager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		746C921625CDB3100071AD46 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				746C921725CDB31F0071AD46 /* Local Storage Manager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E484F17218C80DF975635362 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B1CA0054F56FB1B4974BB1F /* Pods-aequilibrium-assessment-ios.debug.xcconfig */,
+				7296A432AAE3E49E18CA2A96 /* Pods-aequilibrium-assessment-ios.release.xcconfig */,
+				A23F101C3BF744A4AEE46BF9 /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig */,
+				2E9375BD54DE832534A5816D /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.release.xcconfig */,
+				3E75B0A87C7445F8FE129107 /* Pods-aequilibrium-assessment-iosTests.debug.xcconfig */,
+				4DD2DD7053F41F223CA1CBB8 /* Pods-aequilibrium-assessment-iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 746C919B25CD1F480071AD46 /* Build configuration list for PBXNativeTarget "aequilibrium-assessment-ios" */;
 			buildPhases = (
+				69E5B8FDE9D63A33DC50DFD3 /* [CP] Check Pods Manifest.lock */,
 				746C916D25CD1F430071AD46 /* Sources */,
 				746C916E25CD1F430071AD46 /* Frameworks */,
 				746C916F25CD1F430071AD46 /* Resources */,
+				ECD676F088DC280A69758393 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 746C919E25CD1F480071AD46 /* Build configuration list for PBXNativeTarget "aequilibrium-assessment-iosTests" */;
 			buildPhases = (
+				334923FA456E93F8D273C2BB /* [CP] Check Pods Manifest.lock */,
 				746C918325CD1F480071AD46 /* Sources */,
 				746C918425CD1F480071AD46 /* Frameworks */,
 				746C918525CD1F480071AD46 /* Resources */,
@@ -167,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 746C91A125CD1F480071AD46 /* Build configuration list for PBXNativeTarget "aequilibrium-assessment-iosUITests" */;
 			buildPhases = (
+				373F63B17EEF362E806FC2CA /* [CP] Check Pods Manifest.lock */,
 				746C918E25CD1F480071AD46 /* Sources */,
 				746C918F25CD1F480071AD46 /* Frameworks */,
 				746C919025CD1F480071AD46 /* Resources */,
+				A8082DA311B88A0157916C1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,12 +385,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		334923FA456E93F8D273C2BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aequilibrium-assessment-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		373F63B17EEF362E806FC2CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69E5B8FDE9D63A33DC50DFD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aequilibrium-assessment-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8082DA311B88A0157916C1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECD676F088DC280A69758393 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		746C916D25CD1F430071AD46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746C91D225CD39E90071AD46 /* AttributeTableViewCell.swift in Sources */,
+				746C921825CDB31F0071AD46 /* Local Storage Manager.swift in Sources */,
+				746C91FA25CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift in Sources */,
+				746C91CA25CD39AE0071AD46 /* NameTableViewCell.swift in Sources */,
+				746C91F025CD5D870071AD46 /* NameTableViewCellViewModel.swift in Sources */,
+				746C920525CDAC800071AD46 /* API Manager.swift in Sources */,
+				746C91C125CD38720071AD46 /* Constants.swift in Sources */,
 				746C917925CD1F430071AD46 /* ViewController.swift in Sources */,
+				746C91DF25CD5B910071AD46 /* BaseTableViewCellViewModel.swift in Sources */,
+				746C91D725CD3A100071AD46 /* TeamTableViewCell.swift in Sources */,
+				746C91F525CD5D930071AD46 /* AttributeTableViewCellViewModel.swift in Sources */,
+				746C91E425CD5BDA0071AD46 /* HeaderTableViewCell.swift in Sources */,
+				746C91BB25CD351D0071AD46 /* TransformerDetailViewController.swift in Sources */,
+				746C91FF25CD99080071AD46 /* SubmitTableViewCell.swift in Sources */,
+				746C91B325CD30BA0071AD46 /* Transformer.swift in Sources */,
 				746C917525CD1F430071AD46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +681,7 @@
 		};
 		746C919C25CD1F480071AD46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B1CA0054F56FB1B4974BB1F /* Pods-aequilibrium-assessment-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +701,7 @@
 		};
 		746C919D25CD1F480071AD46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7296A432AAE3E49E18CA2A96 /* Pods-aequilibrium-assessment-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,6 +721,7 @@
 		};
 		746C919F25CD1F480071AD46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E75B0A87C7445F8FE129107 /* Pods-aequilibrium-assessment-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +744,7 @@
 		};
 		746C91A025CD1F480071AD46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD2DD7053F41F223CA1CBB8 /* Pods-aequilibrium-assessment-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +767,7 @@
 		};
 		746C91A225CD1F480071AD46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A23F101C3BF744A4AEE46BF9 /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +788,7 @@
 		};
 		746C91A325CD1F480071AD46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9375BD54DE832534A5816D /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

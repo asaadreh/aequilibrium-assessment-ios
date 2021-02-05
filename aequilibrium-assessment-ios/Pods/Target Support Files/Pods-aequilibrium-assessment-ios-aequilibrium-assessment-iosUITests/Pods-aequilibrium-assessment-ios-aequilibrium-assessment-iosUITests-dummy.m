@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests : NSObject
+@end
+@implementation PodsDummy_Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests
+@end

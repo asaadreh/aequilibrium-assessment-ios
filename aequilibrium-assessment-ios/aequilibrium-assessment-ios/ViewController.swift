@@ -11,9 +11,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransformer))
     }
 
+    @objc func addTransformer(){
+        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: ViewControllerIdentifiers.transformerDetailViewController) else {
+            print("Unable to initialize \(ViewControllerIdentifiers.transformerDetailViewController)")
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 
 }
 
