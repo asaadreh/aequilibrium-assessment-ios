@@ -8,6 +8,7 @@ target 'aequilibrium-assessment-ios' do
   # Pods for aequilibrium-assessment-ios
 
   pod 'Alamofire'
+  pod 'Kingfisher'
 
   target 'aequilibrium-assessment-iosTests' do
     inherit! :search_paths

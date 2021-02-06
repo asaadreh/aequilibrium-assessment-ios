@@ -15,3 +15,7 @@ class BaseTableViewCellViewModel {
         self.rowType = rowType
     }
 }
+
+enum RowType: String {
+    case setName, setAttribute, setTeam, header, submit
+}

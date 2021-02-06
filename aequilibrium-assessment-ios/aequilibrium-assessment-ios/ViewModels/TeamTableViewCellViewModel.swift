@@ -13,4 +13,9 @@ class TeamTableViewCellViewModel: BaseTableViewCellViewModel {
     override init(rowType: RowType) {
         super.init(rowType: rowType)
     }
+    
+    init(rowType: RowType, isDecepticon: Bool) {
+        self.isDecepticon = isDecepticon
+        super.init(rowType: rowType)
+    }
 }

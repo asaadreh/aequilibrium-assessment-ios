@@ -14,6 +14,7 @@ class NameTableViewCell: UITableViewCell {
     var viewModel : NameTableViewCellViewModel! {
         didSet {
             nameTF.placeholder = viewModel.placeHolder
+            nameTF.text = viewModel.name
         }
     }
     override func awakeFromNib() {

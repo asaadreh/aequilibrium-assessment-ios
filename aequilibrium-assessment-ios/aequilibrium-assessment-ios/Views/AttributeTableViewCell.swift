@@ -16,11 +16,13 @@ class AttributeTableViewCell: UITableViewCell {
     var viewModel : AttributeTableViewCellViewModel! {
         didSet {
             attributeName.text = viewModel.attribute
+            valueLabel.text = String(viewModel.value)
+            valueStepper.value = Double(viewModel.value)
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        valueStepper.value = 5
+        
         valueStepper.maximumValue = 10
         // Initialization code
     }

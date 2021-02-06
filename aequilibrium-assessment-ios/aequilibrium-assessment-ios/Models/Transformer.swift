@@ -9,6 +9,8 @@ import Foundation
 
 struct Transformer : Codable {
     var name : String
+    var id : String?
+    var team_icon : String?
     var strength : Int
     var intelligence : Int
     var speed : Int

@@ -9,22 +9,85 @@ import UIKit
 
 class TransformerDetailViewController: UIViewController {
 
-    var newTransformerForm = [BaseTableViewCellViewModel(rowType: .header),
-                          NameTableViewCellViewModel(rowType: .setName, placeHolder: "Saadatron"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Strength"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Intelligence"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Speed"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Endurance"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Rank"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Courage"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "FirePower"),
-                          AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Skill"),
-                          TeamTableViewCellViewModel(rowType: .setTeam),
-                          BaseTableViewCellViewModel(rowType: .submit)]
+    
+    var existingTransformer : Transformer?
+    var newTransformerForm : [BaseTableViewCellViewModel]!
+    
+    
+    var delegate : TransformersViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loadExistingTransformer()
         
+    }
+    
+    func loadExistingTransformer() {
+        guard let transformer = existingTransformer else {
+           newTransformerForm = [BaseTableViewCellViewModel(rowType: .header),
+                                  NameTableViewCellViewModel(rowType: .setName, placeHolder: "Saadatron"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Strength"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Intelligence"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Speed"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Endurance"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Rank"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Courage"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "FirePower"),
+                                  AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Skill"),
+                                  TeamTableViewCellViewModel(rowType: .setTeam),
+                                  BaseTableViewCellViewModel(rowType: .submit)]
+            return
+        }
+        
+        var isDecepticon = Bool()
+        if transformer.team == "D"{
+            isDecepticon = true
+        }
+        else {
+            isDecepticon = false
+        }
+        
+        
+        newTransformerForm = [BaseTableViewCellViewModel(rowType: .header),
+                              NameTableViewCellViewModel(rowType: .setName, placeHolder: "Saadatron", name: transformer.name),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Strength", value: transformer.strength),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Intelligence", value: transformer.intelligence),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Speed", value: transformer.speed),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Endurance", value: transformer.endurance),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Rank", value: transformer.rank),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Courage", value: transformer.courage),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "FirePower", value: transformer.firepower),
+                              AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Skill", value: transformer.skill),
+                              TeamTableViewCellViewModel(rowType: .setTeam, isDecepticon: isDecepticon),
+                              BaseTableViewCellViewModel(rowType: .submit)]
+    }
+    
+    
+    func createTransformer() {
+        let transformer = createTransformerObject()
+        
+        APIManager.shared.createTransformer(transformer: transformer) { [self] (res) in
+            
+            switch res{
+            case .success(let transformer):
+                print(transformer)
+                
+                self.delegate?.AddTransformer(transformer: transformer)
+                self.navigationController?.popToRootViewController(animated: true)
+                
+            case .failure(let err):
+                let alertView = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
+                alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                    
+                }))
+                present(alertView, animated: true)
+            }
+        }
+        
+//        LocalStorageManager.shared.saveTransformer(trans: transformer)
+//
+//
     }
     
     func createTransformerObject() -> Transformer {
@@ -40,7 +103,7 @@ class TransformerDetailViewController: UIViewController {
         let skill = (newTransformerForm[9] as? AttributeTableViewCellViewModel)?.value ?? 0
         
         let isDecepticon = (newTransformerForm[10] as? TeamTableViewCellViewModel)?.isDecepticon
-        let team = isDecepticon! ? "B" : "T"
+        let team = isDecepticon! ? "D" : "A"
         
         let transformer = Transformer(name: name,
                                       strength: strength,
@@ -93,6 +156,3 @@ extension TransformerDetailViewController: UITableViewDelegate, UITableViewDataS
     }
 }
 
-enum RowType: String {
-    case setName, setAttribute, setTeam, header, submit
-}

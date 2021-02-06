@@ -10,7 +10,7 @@
 		1933D4F7C19CFBD29E8EED4F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84915F451E6C40B72D37139F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework */; };
 		5CAE71E83A74B319C3188513 /* Pods_aequilibrium_assessment_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D441A081AEDC1FB4705456EE /* Pods_aequilibrium_assessment_iosTests.framework */; };
 		746C917525CD1F430071AD46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917425CD1F430071AD46 /* AppDelegate.swift */; };
-		746C917925CD1F430071AD46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917825CD1F430071AD46 /* ViewController.swift */; };
+		746C917925CD1F430071AD46 /* TransformersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917825CD1F430071AD46 /* TransformersViewController.swift */; };
 		746C917C25CD1F430071AD46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C917A25CD1F430071AD46 /* Main.storyboard */; };
 		746C917E25CD1F480071AD46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746C917D25CD1F480071AD46 /* Assets.xcassets */; };
 		746C918125CD1F480071AD46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C917F25CD1F480071AD46 /* LaunchScreen.storyboard */; };
@@ -30,6 +30,8 @@
 		746C91FF25CD99080071AD46 /* SubmitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */; };
 		746C920525CDAC800071AD46 /* API Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C920425CDAC800071AD46 /* API Manager.swift */; };
 		746C921825CDB31F0071AD46 /* Local Storage Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C921725CDB31F0071AD46 /* Local Storage Manager.swift */; };
+		749B10E525CE8FD9002B47AE /* TransformerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */; };
+		749B10EA25CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */; };
 		F7395C712AF845C09777AAC7 /* Pods_aequilibrium_assessment_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F91C17A67829FF13A3A321 /* Pods_aequilibrium_assessment_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +61,7 @@
 		7296A432AAE3E49E18CA2A96 /* Pods-aequilibrium-assessment-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios.release.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios.release.xcconfig"; sourceTree = "<group>"; };
 		746C917125CD1F430071AD46 /* aequilibrium-assessment-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aequilibrium-assessment-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746C917425CD1F430071AD46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		746C917825CD1F430071AD46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		746C917825CD1F430071AD46 /* TransformersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersViewController.swift; sourceTree = "<group>"; };
 		746C917B25CD1F430071AD46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		746C917D25CD1F480071AD46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		746C918025CD1F480071AD46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,8 @@
 		746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTableViewCell.swift; sourceTree = "<group>"; };
 		746C920425CDAC800071AD46 /* API Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Manager.swift"; sourceTree = "<group>"; };
 		746C921725CDB31F0071AD46 /* Local Storage Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Storage Manager.swift"; sourceTree = "<group>"; };
+		749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCell.swift; sourceTree = "<group>"; };
+		749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		84915F451E6C40B72D37139F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23F101C3BF744A4AEE46BF9 /* Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests/Pods-aequilibrium-assessment-ios-aequilibrium-assessment-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D441A081AEDC1FB4705456EE /* Pods_aequilibrium_assessment_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aequilibrium_assessment_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +163,7 @@
 				746C91BF25CD38610071AD46 /* Resources */,
 				746C91B125CD30960071AD46 /* Models */,
 				746C917425CD1F430071AD46 /* AppDelegate.swift */,
-				746C917825CD1F430071AD46 /* ViewController.swift */,
+				746C917825CD1F430071AD46 /* TransformersViewController.swift */,
 				746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */,
 				746C917A25CD1F430071AD46 /* Main.storyboard */,
 				746C917D25CD1F480071AD46 /* Assets.xcassets */,
@@ -211,6 +215,7 @@
 				746C91D625CD3A100071AD46 /* TeamTableViewCell.swift */,
 				746C91E325CD5BDA0071AD46 /* HeaderTableViewCell.swift */,
 				746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */,
+				749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				746C91EF25CD5D870071AD46 /* NameTableViewCellViewModel.swift */,
 				746C91F425CD5D930071AD46 /* AttributeTableViewCellViewModel.swift */,
 				746C91F925CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift */,
+				749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -499,12 +505,14 @@
 				746C91CA25CD39AE0071AD46 /* NameTableViewCell.swift in Sources */,
 				746C91F025CD5D870071AD46 /* NameTableViewCellViewModel.swift in Sources */,
 				746C920525CDAC800071AD46 /* API Manager.swift in Sources */,
+				749B10EA25CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift in Sources */,
 				746C91C125CD38720071AD46 /* Constants.swift in Sources */,
-				746C917925CD1F430071AD46 /* ViewController.swift in Sources */,
+				746C917925CD1F430071AD46 /* TransformersViewController.swift in Sources */,
 				746C91DF25CD5B910071AD46 /* BaseTableViewCellViewModel.swift in Sources */,
 				746C91D725CD3A100071AD46 /* TeamTableViewCell.swift in Sources */,
 				746C91F525CD5D930071AD46 /* AttributeTableViewCellViewModel.swift in Sources */,
 				746C91E425CD5BDA0071AD46 /* HeaderTableViewCell.swift in Sources */,
+				749B10E525CE8FD9002B47AE /* TransformerTableViewCell.swift in Sources */,
 				746C91BB25CD351D0071AD46 /* TransformerDetailViewController.swift in Sources */,
 				746C91FF25CD99080071AD46 /* SubmitTableViewCell.swift in Sources */,
 				746C91B325CD30BA0071AD46 /* Transformer.swift in Sources */,

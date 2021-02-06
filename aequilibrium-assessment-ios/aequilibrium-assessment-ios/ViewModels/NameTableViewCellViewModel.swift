@@ -17,6 +17,12 @@ class NameTableViewCellViewModel: BaseTableViewCellViewModel {
         super.init(rowType: rowType)
     }
     
+    init(rowType: RowType, placeHolder: String, name: String) {
+        self.name = name
+        self.placeHolder = placeHolder
+        super.init(rowType: rowType)
+    }
+    
     
 }
 

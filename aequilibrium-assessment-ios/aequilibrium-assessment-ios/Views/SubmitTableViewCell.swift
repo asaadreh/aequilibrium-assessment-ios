@@ -24,6 +24,6 @@ class SubmitTableViewCell: UITableViewCell {
 
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         delegate?.view.endEditing(true)
-        print(delegate?.createTransformerObject())
+        delegate?.createTransformer()
     }
 }

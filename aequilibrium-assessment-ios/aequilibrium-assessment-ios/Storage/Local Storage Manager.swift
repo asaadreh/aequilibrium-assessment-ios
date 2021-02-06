@@ -8,47 +8,92 @@
 import Foundation
 
 class LocalStorageManager {
-     
-    public func saveUser(transformer: Transformer) {
-        do {
-             
-            let jsonEncoder = JSONEncoder()
-            let jsonData = try jsonEncoder.encode(transformer)
-            let json = String(data: jsonData, encoding: .utf8) ?? "{}"
-             
-            let defaults: UserDefaults = UserDefaults.standard
-            defaults.set(json, forKey: "transformers")
-            defaults.synchronize()
-             
-        } catch {
-            print(error.localizedDescription)
+    
+    static var shared = LocalStorageManager()
+    
+    
+    public func saveData(transformers : [Transformer]) {
+        let defaults = UserDefaults.standard
+        
+        let encoder = JSONEncoder()
+        
+        guard let savedData = try? encoder.encode(transformers) else {
+            fatalError("Unable to encode transformers data.")
         }
+        defaults.set(savedData,forKey: UserDefaultsKey.transformers)
     }
-     
-    public func getUser() -> Transformer? {
-        do {
-            if (UserDefaults.standard.object(forKey: "transformer") == nil) {
-                return nil
-            } else {
-                let json = UserDefaults.standard.string(forKey: "user") ?? "{}"
-                 
-                let jsonDecoder = JSONDecoder()
-                guard let jsonData = json.data(using: .utf8) else {
-                    return nil
-                }
-                 
-                let transformer: Transformer = try jsonDecoder.decode(Transformer.self, from: jsonData)
-                return transformer
-            }
-        } catch {
-            print(error.localizedDescription)
+    
+    func loadData() -> [Transformer]? {
+        let defaults = UserDefaults.standard
+        
+        guard let savedData = defaults.data(forKey: UserDefaultsKey.transformers) else {
+            return nil
         }
-        return nil
+        let decoder = JSONDecoder()
+        guard let savedTransformers = try? decoder.decode([Transformer].self, from: savedData) else {
+            return nil
+        }
+        
+        return savedTransformers
     }
-     
-    public func removeUser() {
-        let defaults: UserDefaults = UserDefaults.standard
-        defaults.removeObject(forKey: "user")
-        defaults.synchronize()
-    }
+    
+    
+//    public func saveTransformer(trans: Transformer) {
+//
+//
+//        guard let data = UserDefaults.standard.data(forKey: "transformer") else {
+//            // Create an array of transformers
+//            let transformers = [trans]
+//
+//            do {
+//                let encoder = JSONEncoder()
+//                let data = try encoder.encode(transformers)
+//                UserDefaults.standard.setValue(data, forKey: "transformer")
+//            } catch{
+//                print(error.localizedDescription)
+//            }
+//            return
+//        }
+//
+//        do {
+//            // Create JSON Decoder
+//            let decoder = JSONDecoder()
+//
+//            // Decode Note
+//            var transformers = try decoder.decode([Transformer].self, from: data)
+//            transformers.append(trans)
+//            print("List:", transformers)
+//            do {
+//                let encoder = JSONEncoder()
+//                let data = try encoder.encode(transformers)
+//                UserDefaults.standard.setValue(data, forKey: "transformer")
+//            } catch{
+//                print(error.localizedDescription)
+//            }
+//
+//        } catch {
+//            print("Unable to Decode transformers array (\(error))")
+//        }
+//    }
+//
+//    public func getAllTransformers() -> [Transformer]? {
+//        guard let data = UserDefaults.standard.data(forKey: "transformer") else {
+//            return nil
+//        }
+//
+//        do {
+//            // Create JSON Decoder
+//            let decoder = JSONDecoder()
+//
+//            // Decode Transformer
+//            let transformers = try decoder.decode([Transformer].self, from: data)
+//            return transformers
+//
+//        } catch {
+//            print("Unable to Decode Note (\(error))")
+//        }
+//        return nil
+//    }
+//
+    
 }

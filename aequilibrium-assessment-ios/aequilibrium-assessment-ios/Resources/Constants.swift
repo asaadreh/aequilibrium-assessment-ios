@@ -14,4 +14,5 @@ struct ViewControllerIdentifiers {
 
 struct UserDefaultsKey {
     static let accessToken = "access_token"
+    static let transformers = "transformers"
 }

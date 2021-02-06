@@ -17,5 +17,11 @@ class AttributeTableViewCellViewModel: BaseTableViewCellViewModel {
         super.init(rowType: rowType)
     }
     
+    init(rowType: RowType, attribute: String, value: Int) {
+        self.attribute = attribute
+        self.value = value
+        super.init(rowType: rowType)
+    }
+    
     
 }
