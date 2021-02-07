@@ -19,13 +19,16 @@ class TransformersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToTransformerDetail))
+        
         getAccessToken()
         transformers = LocalStorageManager.shared.loadData() ?? [Transformer]()
         
+        setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    func setupUI() {
+        self.title = "Transformers"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToTransformerDetail))
         if transformers.isEmpty {
             footerLabelForTable.isHidden = false
         }
@@ -43,7 +46,17 @@ class TransformersViewController: UIViewController {
             fightButton.isEnabled = false
             fightButton.alpha = 0.5
         }
+        
+        fightButton.shadowAndCorner(cornerRadius: 5.0,
+                                    shadowRadius: 3.0,
+                                    opacity: 0.5,
+                                    color: .gray,
+                                    width: 3,
+                                    height: 3)
     }
+    
+    
+
 
     @objc func goToTransformerDetail(){
         guard let storyBoard = storyboard else {
@@ -60,6 +73,19 @@ class TransformersViewController: UIViewController {
     }
     
     func AddTransformer(transformer: Transformer) {
+        transformers.append(transformer)
+        LocalStorageManager.shared.saveData(transformers: transformers)
+        
+        transformersTableView.insertRows(at: [IndexPath(row: transformers.count - 1, section: 0)], with: .automatic)
+        
+    }
+    
+    func updateTransformer(transformer: Transformer) {
+        
+        if let index = transformers.firstIndex(where: {$0.id == transformer.id}) {
+            transformers.remove(at: index)
+            transformersTableView.reloadData()
+        }
         transformers.append(transformer)
         LocalStorageManager.shared.saveData(transformers: transformers)
         
@@ -93,8 +119,16 @@ class TransformersViewController: UIViewController {
         
     }
     @IBAction func fightButtonTapped(_ sender: UIButton) {
+        guard let storyBoard = storyboard else {
+            return
+        }
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.fightViewController) as? FightViewController else {
+            print("Unable to initialize \(ViewControllerIdentifiers.transformerDetailViewController)")
+            return
+        }
+        vc.transformers = transformers
+        self.navigationController?.pushViewController(vc, animated: true)
         
-        print("Tapped")
     }
     
 }
@@ -155,6 +189,10 @@ extension TransformersViewController : UITableViewDelegate,UITableViewDataSource
                                           }))
             self.present(alert, animated: true)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -83,6 +83,51 @@ class APIManager {
         }
     }
     
+    func updateTransformer( transformer : Transformer, completionHandler: @escaping createTransformerCompletion) {
+        
+        let endPoint : EndpointItem = .updateTransformer
+        var request = URLRequest(url: endPoint.url)
+        request.method = endPoint.httpMethod
+        request.headers = endPoint.headers
+        
+        let jsonData = try? JSONEncoder().encode(transformer)
+        let jsonString = String(data: jsonData!, encoding: .utf8)!
+        print(jsonString)
+        print("Here")
+        request.httpBody = jsonData
+        print(request.headers)
+        
+        AF.request(request).response{ data in
+            print(data.response?.statusCode)
+            if data.response?.statusCode == 200 ||  data.response?.statusCode == 201  {
+                if let responseJSON = data.data {
+                    let response = String(data: responseJSON, encoding: String.Encoding.utf8)
+                    print(response)
+                    
+                    do {
+                        
+                        let decoder = JSONDecoder()
+                        let recievedtransformer = try decoder.decode(Transformer.self, from: responseJSON)
+                        completionHandler(.success(recievedtransformer))
+                    }
+                    catch{
+                        completionHandler(.failure(error))
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+            else {
+                if let responseJSON = data.data {
+                    let errorMsg = String(data: responseJSON, encoding: String.Encoding.utf8)
+                    print(errorMsg)
+                    
+                    completionHandler(.failure(Errors.serverGenerated(errorMsg ?? "Unknown Error")))
+                }
+                completionHandler(.failure(Errors.failedToUpdateTransformer))
+            }
+        }
+    }
+    
     func deleteTransformer(transformerId : String, completionHandler: @escaping defaultCompletion) {
         
         print(transformerId)
@@ -113,7 +158,7 @@ public enum Errors : Error {
     case accessTokenNotRecieved
     case serverGenerated(String)
     case failedToCreateTransformer
-
+    case failedToUpdateTransformer
 }
 
 protocol EndPointType {
@@ -131,6 +176,7 @@ enum EndpointItem {
     case getToken
     case createTransformer
     case deleteTransformer(String)
+    case updateTransformer
 }
 
 enum NetworkEnvironment {
@@ -156,6 +202,8 @@ extension EndpointItem: EndPointType {
             return "transformers"
         case .deleteTransformer(let id):
             return "transformers/\(id)"
+        case .updateTransformer:
+            return "transformers"
         }
     }
     
@@ -168,6 +216,8 @@ extension EndpointItem: EndPointType {
             return .post
         case .deleteTransformer:
             return .delete
+        case .updateTransformer:
+            return .put
         }
     }
     

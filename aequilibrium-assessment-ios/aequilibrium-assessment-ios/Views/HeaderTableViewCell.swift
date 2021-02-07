@@ -6,9 +6,20 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HeaderTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var headerText: UILabel!
+    
+    var viewModel : HeaderTableViewCellViewModel! {
+        didSet {
+            print("Set")
+            headerText.text = viewModel.headerText
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

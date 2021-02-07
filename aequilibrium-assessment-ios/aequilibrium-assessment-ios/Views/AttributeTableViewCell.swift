@@ -24,6 +24,7 @@ class AttributeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         valueStepper.maximumValue = 10
+        valueStepper.minimumValue = 1
         // Initialization code
     }
 

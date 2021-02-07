@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Transformer : Codable {
+struct Transformer : Codable, Equatable {
     var name : String
     var id : String?
     var team_icon : String?

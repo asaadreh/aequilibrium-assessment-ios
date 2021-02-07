@@ -25,7 +25,7 @@ class TransformerDetailViewController: UIViewController {
     
     func loadExistingTransformer() {
         guard let transformer = existingTransformer else {
-           newTransformerForm = [BaseTableViewCellViewModel(rowType: .header),
+           newTransformerForm = [HeaderTableViewCellViewModel(rowType: .header, headerText: "Create your own transformer"),
                                   NameTableViewCellViewModel(rowType: .setName, placeHolder: "Saadatron"),
                                   AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Strength"),
                                   AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Intelligence"),
@@ -48,8 +48,7 @@ class TransformerDetailViewController: UIViewController {
             isDecepticon = false
         }
         
-        
-        newTransformerForm = [BaseTableViewCellViewModel(rowType: .header),
+        newTransformerForm = [HeaderTableViewCellViewModel(rowType: .header, headerText: "Edit your transformer"),
                               NameTableViewCellViewModel(rowType: .setName, placeHolder: "Saadatron", name: transformer.name),
                               AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Strength", value: transformer.strength),
                               AttributeTableViewCellViewModel(rowType: .setAttribute, attribute: "Intelligence", value: transformer.intelligence),
@@ -65,25 +64,48 @@ class TransformerDetailViewController: UIViewController {
     
     
     func createTransformer() {
-        let transformer = createTransformerObject()
         
-        APIManager.shared.createTransformer(transformer: transformer) { [self] (res) in
-            
-            switch res{
-            case .success(let transformer):
-                print(transformer)
+        var transformer = createTransformerObject()
+        
+        guard let existingTransformer = existingTransformer else {
+            APIManager.shared.createTransformer(transformer: transformer) { [self] (res) in
                 
-                self.delegate?.AddTransformer(transformer: transformer)
-                self.navigationController?.popToRootViewController(animated: true)
-                
-            case .failure(let err):
-                let alertView = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
-                alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                switch res{
+                case .success(let transformer):
+                    print(transformer)
                     
-                }))
-                present(alertView, animated: true)
+                    self.delegate?.AddTransformer(transformer: transformer)
+                    self.navigationController?.popToRootViewController(animated: true)
+                    
+                case .failure(let err):
+                    let alertView = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
+                    alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                        
+                    }))
+                    present(alertView, animated: true)
+                }
+            }
+            return
+        }
+        
+        if let id = existingTransformer.id{
+            transformer.id = id
+            APIManager.shared.updateTransformer(transformer: transformer) { [self] (res) in
+                switch res {
+                case .success(let transformer):
+                    self.delegate?.updateTransformer(transformer: transformer)
+                    self.navigationController?.popViewController(animated: true)
+                case .failure(let err):
+                    let alertView = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
+                    alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                        
+                    }))
+                    present(alertView, animated: true)
+                }
             }
         }
+        
+        
         
 //        LocalStorageManager.shared.saveTransformer(trans: transformer)
 //
@@ -134,7 +156,7 @@ extension TransformerDetailViewController: UITableViewDelegate, UITableViewDataS
         
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellType.rawValue) as! HeaderTableViewCell
-            
+            cell.viewModel = newTransformerForm[indexPath.row] as? HeaderTableViewCellViewModel
             return cell
         case .setAttribute:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellType.rawValue) as! AttributeTableViewCell

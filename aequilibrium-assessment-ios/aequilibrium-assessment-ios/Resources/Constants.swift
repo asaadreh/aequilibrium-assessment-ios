@@ -10,6 +10,7 @@ import Foundation
 
 struct ViewControllerIdentifiers {
     static let transformerDetailViewController = "TransformerDetailViewController"
+    static let fightViewController = "FightViewController"
 }
 
 struct UserDefaultsKey {

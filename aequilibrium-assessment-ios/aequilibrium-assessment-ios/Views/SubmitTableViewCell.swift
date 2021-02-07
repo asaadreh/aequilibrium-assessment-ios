@@ -9,11 +9,17 @@ import UIKit
 
 class SubmitTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var submitButton: UIButton!
     var delegate : TransformerDetailViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        submitButton.shadowAndCorner(cornerRadius: 5.0,
+                                     shadowRadius: 3.0,
+                                     opacity: 0.5,
+                                     color: .gray,
+                                     width: 3,
+                                     height: 3)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
