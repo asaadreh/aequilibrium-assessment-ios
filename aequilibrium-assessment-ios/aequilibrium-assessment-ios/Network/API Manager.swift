@@ -8,7 +8,11 @@
 import Foundation
 import Alamofire
 
+
+/// API Manager is a manager for making API calls
 class APIManager {
+    
+    /// Singleton for accessing member functions
     static let shared = APIManager()
     private let sessionManager = Session()
     static let networkEnviroment: NetworkEnvironment = .dev
@@ -16,7 +20,7 @@ class APIManager {
     public typealias defaultCompletion = (Result<Bool,Error>) -> Void
     public typealias createTransformerCompletion = (Result<Transformer,Error>) -> Void
     
-    
+    /// API call to get access token which is saved in User Defaults with key which can be accessed through UserDefaultsKey.accessToken
     func getAccessToken(completionHandler: @escaping defaultCompletion){
         let endPoint : EndpointItem = .getToken
         var request = URLRequest(url: endPoint.url)
@@ -27,7 +31,7 @@ class APIManager {
             if data.response?.statusCode == 200 ||  data.response?.statusCode == 201 {
                 if let responseJSON = data.data {
                     let accessToken = String(data: responseJSON, encoding: String.Encoding.utf8)
-                    print(accessToken)
+//                    print(accessToken)
                     let defaults = UserDefaults.standard
                     defaults.setValue(accessToken, forKey: UserDefaultsKey.accessToken)
                     completionHandler(.success(true))
@@ -40,6 +44,8 @@ class APIManager {
         }
     }
     
+    
+    /// API call to create transformer. Completion Handler returns a Transfromer object when successful
     func createTransformer(transformer : Transformer, completionHandler: @escaping createTransformerCompletion) {
         let endPoint : EndpointItem = .createTransformer
         var request = URLRequest(url: endPoint.url)
@@ -56,13 +62,8 @@ class APIManager {
         AF.request(request).response{ data in
             if data.response?.statusCode == 200 ||  data.response?.statusCode == 201  {
                 if let responseJSON = data.data {
-                    let response = String(data: responseJSON, encoding: String.Encoding.utf8)
-                    print(response)
-                    
                     do {
-                        //                        // Create JSON Decoder
                         let decoder = JSONDecoder()
-                        
                         let recievedtransformer = try decoder.decode(Transformer.self, from: responseJSON)
                         completionHandler(.success(recievedtransformer))
                     }
@@ -74,8 +75,6 @@ class APIManager {
             else {
                 if let responseJSON = data.data {
                     let errorMsg = String(data: responseJSON, encoding: String.Encoding.utf8)
-                    print(errorMsg)
-                    
                     completionHandler(.failure(Errors.serverGenerated(errorMsg ?? "Unknown Error")))
                 }
                 completionHandler(.failure(Errors.failedToCreateTransformer))
@@ -83,6 +82,8 @@ class APIManager {
         }
     }
     
+    
+    /// API call to update transformer. Completion Handler returns an updated Transformer with same id
     func updateTransformer( transformer : Transformer, completionHandler: @escaping createTransformerCompletion) {
         
         let endPoint : EndpointItem = .updateTransformer
@@ -98,12 +99,8 @@ class APIManager {
         print(request.headers)
         
         AF.request(request).response{ data in
-            print(data.response?.statusCode)
             if data.response?.statusCode == 200 ||  data.response?.statusCode == 201  {
                 if let responseJSON = data.data {
-                    let response = String(data: responseJSON, encoding: String.Encoding.utf8)
-                    print(response)
-                    
                     do {
                         
                         let decoder = JSONDecoder()
@@ -119,7 +116,6 @@ class APIManager {
             else {
                 if let responseJSON = data.data {
                     let errorMsg = String(data: responseJSON, encoding: String.Encoding.utf8)
-                    print(errorMsg)
                     
                     completionHandler(.failure(Errors.serverGenerated(errorMsg ?? "Unknown Error")))
                 }
@@ -128,22 +124,18 @@ class APIManager {
         }
     }
     
+    
+    /// API call to delete transformer.
     func deleteTransformer(transformerId : String, completionHandler: @escaping defaultCompletion) {
-        
-        print(transformerId)
-        print(UserDefaults.standard.string(forKey: UserDefaultsKey.accessToken))
         
         let endPoint : EndpointItem = .deleteTransformer(transformerId)
         var request = URLRequest(url: endPoint.url)
         request.method = endPoint.httpMethod
         request.headers = endPoint.headers
-        
-        
+
         AF.request(request).response{ data in
             if data.response?.statusCode == 204 {
-                
                 completionHandler(.success(true))
-                
             }
             else {
                 print("Could not get Access Token")
@@ -151,7 +143,6 @@ class APIManager {
             }
         }
     }
-    
 }
 
 public enum Errors : Error {

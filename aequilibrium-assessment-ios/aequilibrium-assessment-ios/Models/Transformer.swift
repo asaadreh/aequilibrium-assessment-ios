@@ -7,6 +7,9 @@
 
 import Foundation
 
+/** Transformer object
+ 
+ */
 struct Transformer : Codable, Equatable {
     var name : String
     var id : String?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+/// Base class for prototype tableView cell View Model
 class BaseTableViewCellViewModel {
     var rowType : RowType
     
@@ -16,6 +16,7 @@ class BaseTableViewCellViewModel {
     }
 }
 
+/// RowTypes for protype cells
 enum RowType: String {
     case setName, setAttribute, setTeam, header, submit
 }

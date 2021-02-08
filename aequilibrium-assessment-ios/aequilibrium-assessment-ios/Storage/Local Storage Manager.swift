@@ -7,11 +7,17 @@
 
 import Foundation
 
+/// LocalStorageManager uses UserDefaults to store the current state of transformers
 class LocalStorageManager {
     
+    /// LocalStorageManager is a singleton class
     static var shared = LocalStorageManager()
     
-    
+    /**
+        saveData takes a transformer as a parameter and stores it.
+
+        
+    */
     public func saveData(transformers : [Transformer]) {
         let defaults = UserDefaults.standard
         
@@ -22,7 +28,11 @@ class LocalStorageManager {
         }
         defaults.set(savedData,forKey: UserDefaultsKey.transformers)
     }
-    
+    /**
+        loadData returns an optional array of Transformers.
+
+            Nil will be returned if no Transformers are found.
+    */
     func loadData() -> [Transformer]? {
         let defaults = UserDefaults.standard
         

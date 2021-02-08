@@ -7,6 +7,8 @@
 
 import UIKit
 import Kingfisher
+import SwiftSpinner
+
 
 class TransformersViewController: UIViewController {
 
@@ -19,16 +21,19 @@ class TransformersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         getAccessToken()
         transformers = LocalStorageManager.shared.loadData() ?? [Transformer]()
+        self.title = "Transformers"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToTransformerDetail))
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         setupUI()
     }
     
     func setupUI() {
-        self.title = "Transformers"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToTransformerDetail))
+        
         if transformers.isEmpty {
             footerLabelForTable.isHidden = false
         }
@@ -86,6 +91,7 @@ class TransformersViewController: UIViewController {
             transformers.remove(at: index)
             transformersTableView.reloadData()
         }
+        
         transformers.append(transformer)
         LocalStorageManager.shared.saveData(transformers: transformers)
         
@@ -127,7 +133,7 @@ class TransformersViewController: UIViewController {
             return
         }
         vc.transformers = transformers
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true)
         
     }
     
@@ -163,24 +169,21 @@ extension TransformersViewController : UITableViewDelegate,UITableViewDataSource
                                                   let id = strongSelf.transformers[indexPath.row].id else {
                                                 return
                                             }
-                                           
+                                            SwiftSpinner.show("Deleting Transformer")
                                             APIManager.shared.deleteTransformer(transformerId: id) { (Result) in
+                                                SwiftSpinner.hide()
                                                 switch Result{
                                                 case .success(let success):
                                                     if success{
                                                         //Todo: remove at index
                                                         strongSelf.transformers.remove(at: indexPath.row)
                                                         LocalStorageManager.shared.saveData(transformers: strongSelf.transformers)
-                                                        print("Here")
                                                         strongSelf.transformersTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .automatic)
-                                                        
                                                     }
                                                 case .failure(let err):
                                                 print(err)
                                                 }
-                                                
                                             }
-//
                                           }))
             alert.addAction(UIAlertAction(title: "No",
                                           style: .cancel,

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftSpinner
+
 
 class TransformerDetailViewController: UIViewController {
 
@@ -20,6 +22,8 @@ class TransformerDetailViewController: UIViewController {
         super.viewDidLoad()
 
         loadExistingTransformer()
+        
+        self.navigationController?.navigationBar.tintColor = AppColors.purple
         
     }
     
@@ -68,8 +72,10 @@ class TransformerDetailViewController: UIViewController {
         var transformer = createTransformerObject()
         
         guard let existingTransformer = existingTransformer else {
+            
+            SwiftSpinner.show("Creating Transformer")
             APIManager.shared.createTransformer(transformer: transformer) { [self] (res) in
-                
+                SwiftSpinner.hide()
                 switch res{
                 case .success(let transformer):
                     print(transformer)
@@ -90,7 +96,9 @@ class TransformerDetailViewController: UIViewController {
         
         if let id = existingTransformer.id{
             transformer.id = id
+            SwiftSpinner.show("Updating Transformer")
             APIManager.shared.updateTransformer(transformer: transformer) { [self] (res) in
+                SwiftSpinner.hide()
                 switch res {
                 case .success(let transformer):
                     self.delegate?.updateTransformer(transformer: transformer)
@@ -175,6 +183,10 @@ extension TransformerDetailViewController: UITableViewDelegate, UITableViewDataS
             cell.delegate = self
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1933D4F7C19CFBD29E8EED4F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84915F451E6C40B72D37139F /* Pods_aequilibrium_assessment_ios_aequilibrium_assessment_iosUITests.framework */; };
 		5CAE71E83A74B319C3188513 /* Pods_aequilibrium_assessment_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D441A081AEDC1FB4705456EE /* Pods_aequilibrium_assessment_iosTests.framework */; };
-		744F896F25CFCCC5008CC775 /* UIView+Exentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F896E25CFCCC5008CC775 /* UIView+Exentions.swift */; };
+		744F896F25CFCCC5008CC775 /* Exentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F896E25CFCCC5008CC775 /* Exentions.swift */; };
 		746C917525CD1F430071AD46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917425CD1F430071AD46 /* AppDelegate.swift */; };
 		746C917925CD1F430071AD46 /* TransformersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C917825CD1F430071AD46 /* TransformersViewController.swift */; };
 		746C917C25CD1F430071AD46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C917A25CD1F430071AD46 /* Main.storyboard */; };
@@ -32,6 +32,7 @@
 		746C920525CDAC800071AD46 /* API Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C920425CDAC800071AD46 /* API Manager.swift */; };
 		746C921825CDB31F0071AD46 /* Local Storage Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C921725CDB31F0071AD46 /* Local Storage Manager.swift */; };
 		746DA38925D0296D006E2ED2 /* HeaderTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DA38825D0296D006E2ED2 /* HeaderTableViewCellViewModel.swift */; };
+		746DA3A925D13575006E2ED2 /* FightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DA3A825D13575006E2ED2 /* FightTests.swift */; };
 		749B10E525CE8FD9002B47AE /* TransformerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */; };
 		749B10EA25CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */; };
 		749B10FF25CF17CA002B47AE /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10FE25CF17CA002B47AE /* FightViewController.swift */; };
@@ -54,6 +55,13 @@
 			remoteGlobalIDString = 746C917025CD1F430071AD46;
 			remoteInfo = "aequilibrium-assessment-ios";
 		};
+		746DA3AB25D13575006E2ED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 746C916925CD1F430071AD46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 746C917025CD1F430071AD46;
+			remoteInfo = "aequilibrium-assessment-ios";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +71,7 @@
 		4B1CA0054F56FB1B4974BB1F /* Pods-aequilibrium-assessment-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios.debug.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD2DD7053F41F223CA1CBB8 /* Pods-aequilibrium-assessment-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-iosTests.release.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-iosTests/Pods-aequilibrium-assessment-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		7296A432AAE3E49E18CA2A96 /* Pods-aequilibrium-assessment-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aequilibrium-assessment-ios.release.xcconfig"; path = "Target Support Files/Pods-aequilibrium-assessment-ios/Pods-aequilibrium-assessment-ios.release.xcconfig"; sourceTree = "<group>"; };
-		744F896E25CFCCC5008CC775 /* UIView+Exentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Exentions.swift"; sourceTree = "<group>"; };
+		744F896E25CFCCC5008CC775 /* Exentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exentions.swift; sourceTree = "<group>"; };
 		746C917125CD1F430071AD46 /* aequilibrium-assessment-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aequilibrium-assessment-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746C917425CD1F430071AD46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		746C917825CD1F430071AD46 /* TransformersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +100,9 @@
 		746C920425CDAC800071AD46 /* API Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Manager.swift"; sourceTree = "<group>"; };
 		746C921725CDB31F0071AD46 /* Local Storage Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Storage Manager.swift"; sourceTree = "<group>"; };
 		746DA38825D0296D006E2ED2 /* HeaderTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		746DA3A625D13575006E2ED2 /* FightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		746DA3A825D13575006E2ED2 /* FightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTests.swift; sourceTree = "<group>"; };
+		746DA3AA25D13575006E2ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCell.swift; sourceTree = "<group>"; };
 		749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		749B10FE25CF17CA002B47AE /* FightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +137,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		746DA3A325D13575006E2ED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +163,7 @@
 				746C917325CD1F430071AD46 /* aequilibrium-assessment-ios */,
 				746C918A25CD1F480071AD46 /* aequilibrium-assessment-iosTests */,
 				746C919525CD1F480071AD46 /* aequilibrium-assessment-iosUITests */,
+				746DA3A725D13575006E2ED2 /* FightTests */,
 				746C917225CD1F430071AD46 /* Products */,
 				E484F17218C80DF975635362 /* Pods */,
 				2EA56E022DC1D5FAA98FA97D /* Frameworks */,
@@ -157,6 +176,7 @@
 				746C917125CD1F430071AD46 /* aequilibrium-assessment-ios.app */,
 				746C918725CD1F480071AD46 /* aequilibrium-assessment-iosTests.xctest */,
 				746C919225CD1F480071AD46 /* aequilibrium-assessment-iosUITests.xctest */,
+				746DA3A625D13575006E2ED2 /* FightTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,19 +184,13 @@
 		746C917325CD1F430071AD46 /* aequilibrium-assessment-ios */ = {
 			isa = PBXGroup;
 			children = (
+				746DA3B525D1C75D006E2ED2 /* View Controllers */,
 				746C921625CDB3100071AD46 /* Storage */,
 				746C920325CDAC6E0071AD46 /* Network */,
 				746C91E825CD5D1E0071AD46 /* ViewModels */,
 				746C91C825CD39890071AD46 /* Views */,
 				746C91BF25CD38610071AD46 /* Resources */,
 				746C91B125CD30960071AD46 /* Models */,
-				746C917425CD1F430071AD46 /* AppDelegate.swift */,
-				746C917825CD1F430071AD46 /* TransformersViewController.swift */,
-				746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */,
-				749B10FE25CF17CA002B47AE /* FightViewController.swift */,
-				746C917A25CD1F430071AD46 /* Main.storyboard */,
-				746C917D25CD1F480071AD46 /* Assets.xcassets */,
-				746C917F25CD1F480071AD46 /* LaunchScreen.storyboard */,
 				746C918225CD1F480071AD46 /* Info.plist */,
 			);
 			path = "aequilibrium-assessment-ios";
@@ -212,8 +226,9 @@
 		746C91BF25CD38610071AD46 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				746C917425CD1F430071AD46 /* AppDelegate.swift */,
 				746C91C025CD38720071AD46 /* Constants.swift */,
-				744F896E25CFCCC5008CC775 /* UIView+Exentions.swift */,
+				744F896E25CFCCC5008CC775 /* Exentions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -221,12 +236,10 @@
 		746C91C825CD39890071AD46 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				746C91C925CD39AE0071AD46 /* NameTableViewCell.swift */,
-				746C91D125CD39E90071AD46 /* AttributeTableViewCell.swift */,
-				746C91D625CD3A100071AD46 /* TeamTableViewCell.swift */,
-				746C91E325CD5BDA0071AD46 /* HeaderTableViewCell.swift */,
-				746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */,
-				749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */,
+				746C917A25CD1F430071AD46 /* Main.storyboard */,
+				746C917D25CD1F480071AD46 /* Assets.xcassets */,
+				746C917F25CD1F480071AD46 /* LaunchScreen.storyboard */,
+				746DA3B425D1C72E006E2ED2 /* TableViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +271,38 @@
 				746C921725CDB31F0071AD46 /* Local Storage Manager.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		746DA3A725D13575006E2ED2 /* FightTests */ = {
+			isa = PBXGroup;
+			children = (
+				746DA3A825D13575006E2ED2 /* FightTests.swift */,
+				746DA3AA25D13575006E2ED2 /* Info.plist */,
+			);
+			path = FightTests;
+			sourceTree = "<group>";
+		};
+		746DA3B425D1C72E006E2ED2 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				746C91C925CD39AE0071AD46 /* NameTableViewCell.swift */,
+				746C91D125CD39E90071AD46 /* AttributeTableViewCell.swift */,
+				746C91D625CD3A100071AD46 /* TeamTableViewCell.swift */,
+				746C91E325CD5BDA0071AD46 /* HeaderTableViewCell.swift */,
+				746C91FE25CD99080071AD46 /* SubmitTableViewCell.swift */,
+				749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		746DA3B525D1C75D006E2ED2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				746C917825CD1F430071AD46 /* TransformersViewController.swift */,
+				746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */,
+				749B10FE25CF17CA002B47AE /* FightViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		E484F17218C80DF975635362 /* Pods */ = {
@@ -334,6 +379,24 @@
 			productReference = 746C919225CD1F480071AD46 /* aequilibrium-assessment-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		746DA3A525D13575006E2ED2 /* FightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 746DA3AD25D13575006E2ED2 /* Build configuration list for PBXNativeTarget "FightTests" */;
+			buildPhases = (
+				746DA3A225D13575006E2ED2 /* Sources */,
+				746DA3A325D13575006E2ED2 /* Frameworks */,
+				746DA3A425D13575006E2ED2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				746DA3AC25D13575006E2ED2 /* PBXTargetDependency */,
+			);
+			name = FightTests;
+			productName = FightTests;
+			productReference = 746DA3A625D13575006E2ED2 /* FightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -351,6 +414,10 @@
 						TestTargetID = 746C917025CD1F430071AD46;
 					};
 					746C919125CD1F480071AD46 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 746C917025CD1F430071AD46;
+					};
+					746DA3A525D13575006E2ED2 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 746C917025CD1F430071AD46;
 					};
@@ -372,6 +439,7 @@
 				746C917025CD1F430071AD46 /* aequilibrium-assessment-ios */,
 				746C918625CD1F480071AD46 /* aequilibrium-assessment-iosTests */,
 				746C919125CD1F480071AD46 /* aequilibrium-assessment-iosUITests */,
+				746DA3A525D13575006E2ED2 /* FightTests */,
 			);
 		};
 /* End PBXProject section */
@@ -395,6 +463,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		746C919025CD1F480071AD46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		746DA3A425D13575006E2ED2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,7 +601,7 @@
 				746C91D725CD3A100071AD46 /* TeamTableViewCell.swift in Sources */,
 				746C91F525CD5D930071AD46 /* AttributeTableViewCellViewModel.swift in Sources */,
 				746C91E425CD5BDA0071AD46 /* HeaderTableViewCell.swift in Sources */,
-				744F896F25CFCCC5008CC775 /* UIView+Exentions.swift in Sources */,
+				744F896F25CFCCC5008CC775 /* Exentions.swift in Sources */,
 				74EE91C425CFD87A00FCF91F /* Fight.swift in Sources */,
 				749B10E525CE8FD9002B47AE /* TransformerTableViewCell.swift in Sources */,
 				746C91BB25CD351D0071AD46 /* TransformerDetailViewController.swift in Sources */,
@@ -552,6 +627,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		746DA3A225D13575006E2ED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				746DA3A925D13575006E2ED2 /* FightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -564,6 +647,11 @@
 			isa = PBXTargetDependency;
 			target = 746C917025CD1F430071AD46 /* aequilibrium-assessment-ios */;
 			targetProxy = 746C919325CD1F480071AD46 /* PBXContainerItemProxy */;
+		};
+		746DA3AC25D13575006E2ED2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 746C917025CD1F430071AD46 /* aequilibrium-assessment-ios */;
+			targetProxy = 746DA3AB25D13575006E2ED2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -831,6 +919,48 @@
 			};
 			name = Release;
 		};
+		746DA3AE25D13575006E2ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YDCF7K6B9;
+				INFOPLIST_FILE = FightTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saadware.FightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aequilibrium-assessment-ios.app/aequilibrium-assessment-ios";
+			};
+			name = Debug;
+		};
+		746DA3AF25D13575006E2ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YDCF7K6B9;
+				INFOPLIST_FILE = FightTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saadware.FightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aequilibrium-assessment-ios.app/aequilibrium-assessment-ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -866,6 +996,15 @@
 			buildConfigurations = (
 				746C91A225CD1F480071AD46 /* Debug */,
 				746C91A325CD1F480071AD46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		746DA3AD25D13575006E2ED2 /* Build configuration list for PBXNativeTarget "FightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				746DA3AE25D13575006E2ED2 /* Debug */,
+				746DA3AF25D13575006E2ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

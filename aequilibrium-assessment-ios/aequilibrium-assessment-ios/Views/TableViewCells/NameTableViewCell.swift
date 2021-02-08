@@ -32,7 +32,6 @@ class NameTableViewCell: UITableViewCell {
             print("Name TF is nil")
             return
         }
-        print(sender.text)
         viewModel.name = name
     }
     
