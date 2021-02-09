@@ -33,6 +33,7 @@ class TransformersViewController: UIViewController {
     }
     
     func setupUI() {
+        self.navigationController?.navigationBar.tintColor = AppColors.purple
         
         if transformers.isEmpty {
             footerLabelForTable.isHidden = false
@@ -41,13 +42,11 @@ class TransformersViewController: UIViewController {
             footerLabelForTable.isHidden = true
         }
         
-        if transformers.filter({$0.team == "A"}).count > 0 && transformers.filter({$0.team == "D"}).count > 0 {
-            print("fight button should be enabled")
+        if transformers.filter({$0.team == .Autobots}).count > 0 && transformers.filter({$0.team == .Decepticons}).count > 0 {
             fightButton.isEnabled = true
             fightButton.alpha = 1
         }
         else{
-            print("fight button should be disabled")
             fightButton.isEnabled = false
             fightButton.alpha = 0.5
         }
@@ -59,9 +58,6 @@ class TransformersViewController: UIViewController {
                                     width: 3,
                                     height: 3)
     }
-    
-    
-
 
     @objc func goToTransformerDetail(){
         guard let storyBoard = storyboard else {
@@ -122,7 +118,6 @@ class TransformersViewController: UIViewController {
         vc.existingTransformer = transformer
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     @IBAction func fightButtonTapped(_ sender: UIButton) {
         guard let storyBoard = storyboard else {
@@ -136,7 +131,6 @@ class TransformersViewController: UIViewController {
         self.present(vc, animated: true)
         
     }
-    
 }
 
 extension TransformersViewController : UITableViewDelegate,UITableViewDataSource {
@@ -204,4 +198,3 @@ extension TransformersViewController : UITableViewDelegate,UITableViewDataSource
     }
     
 }
-

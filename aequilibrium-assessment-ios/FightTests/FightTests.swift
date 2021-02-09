@@ -55,7 +55,7 @@ class FightTests: XCTestCase {
 
     func testFightSequence() {
         
-        XCTAssertEqual(sut.numberOfRounds, 1, "Number of rounds wrongly computed")
+        
         
         //given
         
@@ -66,7 +66,7 @@ class FightTests: XCTestCase {
         print(sut.numberOfRounds)
         //then
         
-        
+        XCTAssertEqual(sut.numberOfRounds, 1, "Number of rounds wrongly computed")
         XCTAssertEqual(sut.destroyEverything, false, "Everything destroyed result is incorrect")
         XCTAssertEqual(sut.winningTeam, .Decepticons, "Winner is incorrect")
     }
@@ -99,7 +99,7 @@ class FightTests: XCTestCase {
         
         let winner = sut.fight(autobot: transformer2, decepticon: transformer1)
         
-        XCTAssertEqual(winner, nil, "There should be no winner")
+        XCTAssertEqual(winner, .Tie, "There should be no winner")
         XCTAssertEqual(sut.destroyEverything, true, "Everything should be destroyed")
     }
 

@@ -53,9 +53,7 @@ class APIManager {
         request.headers = endPoint.headers
         
         let jsonData = try? JSONEncoder().encode(transformer)
-        let jsonString = String(data: jsonData!, encoding: .utf8)!
-        print(jsonString)
-        print("Here")
+//        let jsonString = String(data: jsonData!, encoding: .utf8)!
         request.httpBody = jsonData
         print(request.headers)
         
@@ -92,11 +90,9 @@ class APIManager {
         request.headers = endPoint.headers
         
         let jsonData = try? JSONEncoder().encode(transformer)
-        let jsonString = String(data: jsonData!, encoding: .utf8)!
-        print(jsonString)
-        print("Here")
+//        let jsonString = String(data: jsonData!, encoding: .utf8)!
         request.httpBody = jsonData
-        print(request.headers)
+
         
         AF.request(request).response{ data in
             if data.response?.statusCode == 200 ||  data.response?.statusCode == 201  {

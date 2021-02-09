@@ -22,8 +22,12 @@ struct Transformer : Codable, Equatable {
     var courage : Int
     var firepower : Int
     var skill : Int
-    var team : String
+    var team : Team
     var overallRating : Int {
         return strength + intelligence + speed + endurance + firepower
     }
+}
+enum Team : String, Codable {
+    case Autobots = "A"
+    case Decepticons = "D"
 }

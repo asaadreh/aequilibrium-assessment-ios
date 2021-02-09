@@ -15,7 +15,6 @@ class HeaderTableViewCell: UITableViewCell {
     
     var viewModel : HeaderTableViewCellViewModel! {
         didSet {
-            print("Set")
             headerText.text = viewModel.headerText
         }
     }

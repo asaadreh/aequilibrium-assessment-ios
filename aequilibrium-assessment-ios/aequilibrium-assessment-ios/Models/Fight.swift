@@ -9,7 +9,8 @@ import Foundation
 
 
 
-/// Winner is an enum which can be either Autobots, Deceptors or Tie (no winner)
+/// Winner is an enum which can be either
+/// Autobots, Deceptors or Tie (no winner)
 enum Winner {
     case Autobots
     case Decepticons
@@ -18,10 +19,7 @@ enum Winner {
 
 class Fight {
     
-    internal var numberOfRounds : Int {
-        
-        return autobots.count >= decepticons.count ? decepticons.count : autobots.count
-    }
+    internal var numberOfRounds : Int
     var transformers : [Transformer]
     var autobots: [Transformer]
     var decepticons: [Transformer]
@@ -30,9 +28,10 @@ class Fight {
     
     init(transformers: [Transformer]) {
         self.transformers = transformers
-        self.autobots = transformers.filter({$0.team == "A"}).sorted(by: {$0.rank > $1.rank})
-        self.decepticons = transformers.filter({$0.team == "D"}).sorted(by: {$0.rank > $1.rank})
+        self.autobots = transformers.filter({$0.team == .Autobots}).sorted(by: {$0.rank > $1.rank})
+        self.decepticons = transformers.filter({$0.team == .Decepticons}).sorted(by: {$0.rank > $1.rank})
         self.winningTeam = .Tie
+        self.numberOfRounds = autobots.count >= decepticons.count ? decepticons.count : autobots.count
     }
     
     func prepareForFight() {
@@ -43,16 +42,12 @@ class Fight {
             
             if !destroyEverything {
                 let winner = fight(autobot: autobots[i], decepticon: decepticons[i])
-                print("WINNER:", winner)
                 if winner ==  .Autobots{
                     countForWinner += 1
                 }
                 if winner == .Decepticons {
                     countForWinner -= 1
                 }
-                
-//                autobots.remove(at: i)
-//                decepticons.remove(at: i)
             }
             else {
                 break

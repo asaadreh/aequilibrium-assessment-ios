@@ -33,6 +33,7 @@
 		746C921825CDB31F0071AD46 /* Local Storage Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C921725CDB31F0071AD46 /* Local Storage Manager.swift */; };
 		746DA38925D0296D006E2ED2 /* HeaderTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DA38825D0296D006E2ED2 /* HeaderTableViewCellViewModel.swift */; };
 		746DA3A925D13575006E2ED2 /* FightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DA3A825D13575006E2ED2 /* FightTests.swift */; };
+		749A67E525D2D3B300F8646C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A67E425D2D3B300F8646C /* BaseViewController.swift */; };
 		749B10E525CE8FD9002B47AE /* TransformerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */; };
 		749B10EA25CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */; };
 		749B10FF25CF17CA002B47AE /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B10FE25CF17CA002B47AE /* FightViewController.swift */; };
@@ -103,6 +104,7 @@
 		746DA3A625D13575006E2ED2 /* FightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		746DA3A825D13575006E2ED2 /* FightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTests.swift; sourceTree = "<group>"; };
 		746DA3AA25D13575006E2ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749A67E425D2D3B300F8646C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		749B10E425CE8FD9002B47AE /* TransformerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCell.swift; sourceTree = "<group>"; };
 		749B10E925CE8FEA002B47AE /* TransformerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		749B10FE25CF17CA002B47AE /* FightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				746C917825CD1F430071AD46 /* TransformersViewController.swift */,
 				746C91BA25CD351D0071AD46 /* TransformerDetailViewController.swift */,
 				749B10FE25CF17CA002B47AE /* FightViewController.swift */,
+				749A67E425D2D3B300F8646C /* BaseViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				746C91D225CD39E90071AD46 /* AttributeTableViewCell.swift in Sources */,
 				746C921825CDB31F0071AD46 /* Local Storage Manager.swift in Sources */,
 				746C91FA25CD5D9F0071AD46 /* TeamTableViewCellViewModel.swift in Sources */,
+				749A67E525D2D3B300F8646C /* BaseViewController.swift in Sources */,
 				746C91CA25CD39AE0071AD46 /* NameTableViewCell.swift in Sources */,
 				746C91F025CD5D870071AD46 /* NameTableViewCellViewModel.swift in Sources */,
 				746C920525CDAC800071AD46 /* API Manager.swift in Sources */,

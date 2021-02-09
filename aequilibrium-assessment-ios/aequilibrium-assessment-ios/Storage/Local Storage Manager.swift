@@ -15,8 +15,6 @@ class LocalStorageManager {
     
     /**
         saveData takes a transformer as a parameter and stores it.
-
-        
     */
     public func saveData(transformers : [Transformer]) {
         let defaults = UserDefaults.standard
@@ -46,64 +44,5 @@ class LocalStorageManager {
         
         return savedTransformers
     }
-    
-    
-//    public func saveTransformer(trans: Transformer) {
-//
-//
-//        guard let data = UserDefaults.standard.data(forKey: "transformer") else {
-//            // Create an array of transformers
-//            let transformers = [trans]
-//
-//            do {
-//                let encoder = JSONEncoder()
-//                let data = try encoder.encode(transformers)
-//                UserDefaults.standard.setValue(data, forKey: "transformer")
-//            } catch{
-//                print(error.localizedDescription)
-//            }
-//            return
-//        }
-//
-//        do {
-//            // Create JSON Decoder
-//            let decoder = JSONDecoder()
-//
-//            // Decode Note
-//            var transformers = try decoder.decode([Transformer].self, from: data)
-//            transformers.append(trans)
-//            print("List:", transformers)
-//            do {
-//                let encoder = JSONEncoder()
-//                let data = try encoder.encode(transformers)
-//                UserDefaults.standard.setValue(data, forKey: "transformer")
-//            } catch{
-//                print(error.localizedDescription)
-//            }
-//
-//        } catch {
-//            print("Unable to Decode transformers array (\(error))")
-//        }
-//    }
-//
-//    public func getAllTransformers() -> [Transformer]? {
-//        guard let data = UserDefaults.standard.data(forKey: "transformer") else {
-//            return nil
-//        }
-//
-//        do {
-//            // Create JSON Decoder
-//            let decoder = JSONDecoder()
-//
-//            // Decode Transformer
-//            let transformers = try decoder.decode([Transformer].self, from: data)
-//            return transformers
-//
-//        } catch {
-//            print("Unable to Decode Note (\(error))")
-//        }
-//        return nil
-//    }
-//
     
 }

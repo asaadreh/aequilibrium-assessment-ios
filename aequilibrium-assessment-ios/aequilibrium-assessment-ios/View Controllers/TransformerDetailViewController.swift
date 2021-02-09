@@ -22,9 +22,6 @@ class TransformerDetailViewController: UIViewController {
         super.viewDidLoad()
 
         loadExistingTransformer()
-        
-        self.navigationController?.navigationBar.tintColor = AppColors.purple
-        
     }
     
     func loadExistingTransformer() {
@@ -45,7 +42,7 @@ class TransformerDetailViewController: UIViewController {
         }
         
         var isDecepticon = Bool()
-        if transformer.team == "D"{
+        if transformer.team == .Decepticons{
             isDecepticon = true
         }
         else {
@@ -133,7 +130,7 @@ class TransformerDetailViewController: UIViewController {
         let skill = (newTransformerForm[9] as? AttributeTableViewCellViewModel)?.value ?? 0
         
         let isDecepticon = (newTransformerForm[10] as? TeamTableViewCellViewModel)?.isDecepticon
-        let team = isDecepticon! ? "D" : "A"
+        let team : Team = isDecepticon! ? .Decepticons : .Autobots
         
         let transformer = Transformer(name: name,
                                       strength: strength,

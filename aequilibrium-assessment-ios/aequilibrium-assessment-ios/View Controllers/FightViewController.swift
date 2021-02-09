@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class FightViewController: UIViewController {
+class FightViewController: BaseViewController {
 
     var transformers : [Transformer]?
     @IBOutlet weak var autobotsImageView: UIImageView!
@@ -16,6 +16,9 @@ class FightViewController: UIViewController {
     @IBOutlet weak var autobotsList: UIStackView!
     @IBOutlet weak var decepticonsList: UIStackView!
     @IBOutlet weak var fightButton: UIButton!
+    @IBOutlet weak var autobotsLabel: UILabel!
+    @IBOutlet weak var decepticonsLabel: UILabel!
+    
     var blurEffectView : UIView!
     
     var fight : Fight!
@@ -33,11 +36,13 @@ class FightViewController: UIViewController {
         decepticonsImageView.kf.setImage(with: URL(string: fight.decepticons.first?.team_icon ?? ""))
         
         setupUI()
-//        prepareForFight(transformers: transformers)
     }
     
     
     func setupUI(){
+        
+        
+        makeLabelsFontSizeEqual(label1: autobotsLabel, label2: decepticonsLabel)
         
         fightButton.shadowAndCorner(cornerRadius: 5.0,
                                     shadowRadius: 3.0,
